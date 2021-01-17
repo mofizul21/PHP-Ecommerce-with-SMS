@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <button class="checkout">Checkout</button>
+        <a href="checkout.php"><button class="checkout">Checkout</button></a>
 
     </div>
 </div>
