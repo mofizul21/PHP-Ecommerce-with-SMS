@@ -29,19 +29,19 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '81a90f06fd8456b5e39d188071584b0b7e5b7a85',
-    'name' => '__root__',
+    'reference' => '9d4a569fead5eff96a2ffe12892f9a8c5e8b7861',
+    'name' => 'mofizul/smsecom',
   ),
   'versions' => 
   array (
-    '__root__' => 
+    'mofizul/smsecom' => 
     array (
       'pretty_version' => 'dev-master',
       'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '81a90f06fd8456b5e39d188071584b0b7e5b7a85',
+      'reference' => '9d4a569fead5eff96a2ffe12892f9a8c5e8b7861',
     ),
     'phpmailer/phpmailer' => 
     array (

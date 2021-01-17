@@ -1,7 +1,19 @@
 {
+    "name": "mofizul/smsecom",
+    "description": "Simple ecommerce with PHP",
+    "license": "MIT",
+    "authors": [{
+        "name": "Mofizul Islam",
+        "email": "mofizul21@gmail.com"
+    }],
     "require": {
         "twbs/bootstrap": "5.0.0-beta1",
         "phpmailer/phpmailer": "^6.2",
         "phroute/phroute": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
     }
 }

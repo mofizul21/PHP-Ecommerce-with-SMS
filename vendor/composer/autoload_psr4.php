@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Phroute\\Phroute\\' => array($vendorDir . '/phroute/phroute/src/Phroute'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'App\\' => array($baseDir . '/app'),
 );
