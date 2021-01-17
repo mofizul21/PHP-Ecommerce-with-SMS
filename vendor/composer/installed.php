@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '9d4a569fead5eff96a2ffe12892f9a8c5e8b7861',
+    'reference' => '17fb129226fca9388881432061bbdf3ce0a9e192',
     'name' => 'mofizul/smsecom',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '9d4a569fead5eff96a2ffe12892f9a8c5e8b7861',
+      'reference' => '17fb129226fca9388881432061bbdf3ce0a9e192',
     ),
     'phpmailer/phpmailer' => 
     array (

@@ -10,10 +10,8 @@ require_once 'vendor/autoload.php';
 
 $router = new RouteCollector(new RouteParser());
 
-$router->controller('/users', App\Controllers\UsersController::class);
-$router->controller('/', App\Controllers\HomeController::class);
+require_once __DIR__ . '/routes.php';
 
-//print_r($router->controller('/users', App\Controllers\UsersController::class));
 
 $dispatcher = new Dispatcher($router->getData());
 
@@ -29,3 +27,4 @@ try {
 
 // Print out the value returned from the dispatched function
 echo $response;
+
