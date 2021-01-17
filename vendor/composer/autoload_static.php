@@ -9,11 +9,16 @@ class ComposerStaticInit1ddd84cb2916b62ba3de2827c1b14df5
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
+            'Phroute\\Phroute\\' => 16,
             'PHPMailer\\PHPMailer\\' => 20,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Phroute\\Phroute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phroute/phroute/src/Phroute',
+        ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',

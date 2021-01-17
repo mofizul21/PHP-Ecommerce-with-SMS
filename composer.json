@@ -1,6 +1,7 @@
 {
     "require": {
         "twbs/bootstrap": "5.0.0-beta1",
-        "phpmailer/phpmailer": "^6.2"
+        "phpmailer/phpmailer": "^6.2",
+        "phroute/phroute": "^2.1"
     }
 }
