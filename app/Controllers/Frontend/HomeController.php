@@ -127,21 +127,20 @@ class HomeController extends Controller
         }
 
         if (empty($errors)) {
-            $user = User::select(['id', 'username', 'email', 'password', 'email_verified_at'])->where('email', $email)->first();
+            $user = User::select(['id', 'username', 'email', 'password', 'email_verified_at', 'profile_photo'])->where('email', $email)->first();
             if ($user) {
                 if ($user->email_verified_at === null) {
                     errMsg('Your account is not activated yet', 'login');
-                    exit;
                 }
                 if (password_verify($password, $user->password) === true) {
                     $_SESSION['success'] = 'Logged in successful';
                     $_SESSION['user'] = [
                         'id'            =>  $user->id,
                         'email'         =>  $user->email,
-                        'username'      =>  $user->username
+                        'username'      =>  $user->username,
+                        'profile_photo' =>  $user->profile_photo
                     ];
                     header('Location: /dashboard');
-                    exit;
                 } else {
                     errMsg('Your password is invalid', 'login');
                 }

@@ -11,6 +11,17 @@
             </div>
 
             <?php include_once 'partials/notification.php'; ?>
+
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="media/profile_photo/<?= $_SESSION['user']['profile_photo']; ?>" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $_SESSION['user']['username']; ?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?= $_SESSION['user']['email']; ?></h6>
+                    <p class="card-text">You can put here your bio or other information.</p>
+                    <a href="#" class="btn btn-success">Edit Profile</a>
+                    <a href="#" class="btn btn-danger">Delete Profile</a>
+                </div>
+            </div>
         </main>
     </div>
 </div>

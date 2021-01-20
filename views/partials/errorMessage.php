@@ -10,5 +10,5 @@ function errMsg($msg, $redirectLink)
     $errors[] = $msg;
     $_SESSION['errors'] = $errors;
     header("Location: /{$redirectLink}");
-    return;
+    exit();
 }
