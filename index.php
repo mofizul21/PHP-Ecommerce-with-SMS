@@ -10,7 +10,10 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 require_once 'vendor/autoload.php';
 session_start();
 
-// illuminate database
+// include errorMessage.php
+require_once __DIR__ . '/views/partials/errorMessage.php';
+
+// Illuminate/Database connection
 $capsule = new Capsule();
 $capsule->addConnection([
     'driver'    => 'mysql',
@@ -25,7 +28,7 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-// route
+// Route with PHRoute
 $router = new RouteCollector(new RouteParser());
 require_once __DIR__ . '/routes.php';
 $dispatcher = new Dispatcher($router->getData());

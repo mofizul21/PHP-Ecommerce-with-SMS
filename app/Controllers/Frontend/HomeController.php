@@ -101,7 +101,7 @@ class HomeController extends Controller
         } else {
             $_SESSION['errors'] = $errors;
             header('Location: /register');
-            exit;
+            exit;           
         }
     }
 
@@ -130,26 +130,23 @@ class HomeController extends Controller
             $user = User::select(['id', 'username', 'email', 'password', 'email_verified_at'])->where('email', $email)->first();
             if ($user) {
                 if ($user->email_verified_at === null) {
-                    $errors[] = 'Your account is not activated yet';
-                    $_SESSION['errors'] = $errors;
-                    header('Location: /login');
+                    errMsg('Your account is not activated yet', 'login');
                     exit;
                 }
                 if (password_verify($password, $user->password) === true) {
                     $_SESSION['success'] = 'Logged in successful';
+                    $_SESSION['user'] = [
+                        'id'            =>  $user->id,
+                        'email'         =>  $user->email,
+                        'username'      =>  $user->username
+                    ];
                     header('Location: /dashboard');
                     exit;
                 } else {
-                    $errors[] = 'Your password is invalid';
-                    $_SESSION['errors'] = $errors;
-                    header('Location: /login');
-                    exit;
+                    errMsg('Your password is invalid', 'login');
                 }
             } else {
-                $errors[] = 'Your email not found in our database';
-                $_SESSION['errors'] = $errors;
-                header('Location: /login');
-                exit;
+                errMsg('Your email not found in our database', 'login');
             }
         }
     }
@@ -180,5 +177,12 @@ class HomeController extends Controller
             header('Location: /login');
             exit;
         }
+    }
+
+    public function getLogout(){
+        unset($_SESSION['user']);
+
+        $_SESSION['success'] = "You have logout successfully.";
+        header('Location: /login');
     }
 }
