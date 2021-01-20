@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'c68c5fc70f66ac0e83973fe69dd092c7dc194890',
+    'reference' => '98c7a265ac79a451268deb4de3564c2c5303be11',
     'name' => 'mofizul/smsecom',
   ),
   'versions' => 
@@ -104,7 +104,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'c68c5fc70f66ac0e83973fe69dd092c7dc194890',
+      'reference' => '98c7a265ac79a451268deb4de3564c2c5303be11',
     ),
     'nesbot/carbon' => 
     array (
@@ -164,6 +164,24 @@ private static $installed = array (
       array (
       ),
       'reference' => '408d5eafb83c57f6365a3ca330ff23aa4a5fa39b',
+    ),
+    'respect/stringifier' => 
+    array (
+      'pretty_version' => '0.2.0',
+      'version' => '0.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e55af3c8aeaeaa2abb5fa47a58a8e9688cc23b59',
+    ),
+    'respect/validation' => 
+    array (
+      'pretty_version' => '2.1.0',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6c3aed92137836788c8ce654b9c35763c5e98b54',
     ),
     'symfony/console' => 
     array (

@@ -10,7 +10,8 @@
         "twbs/bootstrap": "5.0.0-beta1",
         "phpmailer/phpmailer": "^6.2",
         "phroute/phroute": "^2.1",
-        "illuminate/database": "^8.22"
+        "illuminate/database": "^8.22",
+        "respect/validation": "^2.1"
     },
     "autoload": {
         "psr-4": {

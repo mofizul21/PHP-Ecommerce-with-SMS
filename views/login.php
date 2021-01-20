@@ -37,15 +37,17 @@
 <body class="text-center">
 
     <main class="form-signin">
-        <form>
+        <?php include_once 'partials/notification.php'; ?>
+
+        <form method="post" action="/login">
             <img class="mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 fw-normal">Please login</h1>
 
             <label for="inputEmail" class="visually-hidden">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+            <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
 
             <label for="inputPassword" class="visually-hidden">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
             <div class="checkbox mb-3">
                 <label>

@@ -8,6 +8,7 @@ use Phroute\Phroute\Exception\HttpMethodNotAllowedException;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 require_once 'vendor/autoload.php';
+session_start();
 
 // illuminate database
 $capsule = new Capsule();
@@ -23,7 +24,6 @@ $capsule->addConnection([
 ]);
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
-$users = Capsule::table('users')->where('email', 'asad@gmail.com')->first();
 
 // route
 $router = new RouteCollector(new RouteParser());

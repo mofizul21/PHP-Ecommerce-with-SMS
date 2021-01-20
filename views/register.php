@@ -37,7 +37,10 @@
 <body class="text-center">
 
     <main class="form-signin">
-        <form>
+
+        <?php include_once 'partials/notification.php'; ?>
+
+        <form method="post" action="/register" enctype="multipart/form-data">
             <img class="mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
             <h1 class="h3 mb-3 fw-normal">Create an account</h1>
 
