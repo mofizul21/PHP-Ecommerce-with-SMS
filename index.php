@@ -10,9 +10,6 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 require_once 'vendor/autoload.php';
 session_start();
 
-// include errorMessage.php
-require_once __DIR__ . '/views/partials/errorMessage.php';
-
 // Illuminate/Database connection
 $capsule = new Capsule();
 $capsule->addConnection([

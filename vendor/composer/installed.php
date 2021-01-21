@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '98c7a265ac79a451268deb4de3564c2c5303be11',
+    'reference' => 'c41df38373813e107602e71676a772f32c649951',
     'name' => 'mofizul/smsecom',
   ),
   'versions' => 
@@ -22,17 +22,17 @@
     ),
     'illuminate/collections' => 
     array (
-      'pretty_version' => 'v8.22.1',
-      'version' => '8.22.1.0',
+      'pretty_version' => 'v8.23.1',
+      'version' => '8.23.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'fa1f5a2809a777040ab1616527dc2e66f4ae93f4',
+      'reference' => 'c9227225ac1cc298bee78973477bf9c4692e8f83',
     ),
     'illuminate/container' => 
     array (
-      'pretty_version' => 'v8.22.1',
-      'version' => '8.22.1.0',
+      'pretty_version' => 'v8.23.1',
+      'version' => '8.23.1.0',
       'aliases' => 
       array (
       ),
@@ -40,8 +40,8 @@
     ),
     'illuminate/contracts' => 
     array (
-      'pretty_version' => 'v8.22.1',
-      'version' => '8.22.1.0',
+      'pretty_version' => 'v8.23.1',
+      'version' => '8.23.1.0',
       'aliases' => 
       array (
       ),
@@ -49,17 +49,17 @@
     ),
     'illuminate/database' => 
     array (
-      'pretty_version' => 'v8.22.1',
-      'version' => '8.22.1.0',
+      'pretty_version' => 'v8.23.1',
+      'version' => '8.23.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4a2040c25d28315be005784a9ea4c2efb2a95a27',
+      'reference' => 'e0380e1c08aa19baeccae297a2ab958538379d94',
     ),
     'illuminate/macroable' => 
     array (
-      'pretty_version' => 'v8.22.1',
-      'version' => '8.22.1.0',
+      'pretty_version' => 'v8.23.1',
+      'version' => '8.23.1.0',
       'aliases' => 
       array (
       ),
@@ -67,12 +67,12 @@
     ),
     'illuminate/support' => 
     array (
-      'pretty_version' => 'v8.22.1',
-      'version' => '8.22.1.0',
+      'pretty_version' => 'v8.23.1',
+      'version' => '8.23.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6a516676a83d2a73c46eaf7907f730e86ef60da5',
+      'reference' => 'b5f12bc62bfca920d0b3379da7a7d282999343af',
     ),
     'mofizul/smsecom' => 
     array (
@@ -81,7 +81,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '98c7a265ac79a451268deb4de3564c2c5303be11',
+      'reference' => 'c41df38373813e107602e71676a772f32c649951',
     ),
     'nesbot/carbon' => 
     array (

@@ -14,12 +14,12 @@ class HomeController extends Controller
 {
     public function getIndex()
     {
-        $this->view('home');
+        view('home');
     }
 
     public function getRegister()
     {
-        $this->view('register');
+        view('register');
     }
 
     public function postRegister()
@@ -95,19 +95,18 @@ class HomeController extends Controller
             }
 
             // display success message
-            $_SESSION['success'] = "Registration successfull. Check email inbox to activate account.";
-            header('Location: /login');
-            exit;
+            successMsg('Regitration successful. Please check your email inbox.', 'login');
         } else {
-            $_SESSION['errors'] = $errors;
-            header('Location: /register');
-            exit;           
+            errMsg('Errors occured', 'login');      
         }
     }
 
     public function getLogin()
     {
-        $this->view('login');
+        if (isset($_SESSION['user'])) {
+            header('Location: dashboard');
+        }
+        view('login');
     }
 
     public function postLogin()
@@ -181,7 +180,6 @@ class HomeController extends Controller
     public function getLogout(){
         unset($_SESSION['user']);
 
-        $_SESSION['success'] = "You have logout successfully.";
-        header('Location: /login');
+        successMsg("You have logout successfully.", "login");
     }
 }
