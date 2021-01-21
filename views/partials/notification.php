@@ -1,5 +1,5 @@
 <?php if (!empty($_SESSION['errors'])) : ?>
-    <div class="alert alert-warning" style="width: 20rem;">
+    <div class="alert alert-warning">
         <ul>
             <?php foreach ($_SESSION['errors'] as $error) : ?>
                 <li><?= $error; ?></li>
@@ -10,7 +10,7 @@
 <?php endif; ?>
 
 <?php if (isset($_SESSION['success'])) : ?>
-    <div class="alert alert-success" style="width: 20rem;">
+    <div class="alert alert-success">
         <p><?php echo $_SESSION['success']; ?></p>
     </div>
     <?php unset($_SESSION['success']); ?>
