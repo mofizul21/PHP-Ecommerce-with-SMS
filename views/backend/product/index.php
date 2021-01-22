@@ -66,9 +66,7 @@ partial_view('dash_header'); ?>
                     </form>
                 </div>
 
-                <?php
-                $products = Product::all();
-                if ($products->count() > 0) { ?>
+                <?php if ($products->count() > 0) { ?>
                     <div class="col-md-8">
                         <table class="table table-bordered mt-3">
                             <thead>

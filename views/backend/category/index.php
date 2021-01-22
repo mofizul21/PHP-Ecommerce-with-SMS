@@ -39,8 +39,7 @@ partial_view('dash_header'); ?>
                         <button type="submit" class="btn btn-primary mt-3">Add Category</button>
                     </form>
                 </div>
-                <?php
-                $categories = Category::all();
+                <?php //$categories = Category::all();
                 if ($categories->count() > 0) { ?>
                     <div class="col-md-8">
                         <table class="table table-bordered mt-3">

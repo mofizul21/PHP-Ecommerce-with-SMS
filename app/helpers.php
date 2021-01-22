@@ -1,8 +1,10 @@
 <?php
 
 if (!function_exists('view')) {
-    function view($view = 'index')
+    function view($view = 'index', $data = [])
     {
+        extract($data, EXTR_SKIP);
+        ob_start();
         require_once __DIR__ . '/../views/' . $view . '.php';
     }
 }

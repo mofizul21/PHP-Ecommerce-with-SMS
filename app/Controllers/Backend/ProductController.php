@@ -8,7 +8,8 @@ use Respect\Validation\Validator;
 
 class ProductController extends Controller{
     public function getIndex(){
-        view('backend/product/index');
+        $products = Product::all();
+        view('backend/product/index', ['products' => $products]);
     }
 
     public function postIndex(){
