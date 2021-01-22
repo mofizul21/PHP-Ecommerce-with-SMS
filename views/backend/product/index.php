@@ -1,11 +1,4 @@
-<?php
-
-use App\Models\Product;
-use App\Models\Category;
-
-$categories = Category::all();
-
-partial_view('dash_header'); ?>
+<?php partial_view('dash_header'); ?>
 
 <div class="container-fluid">
     <div class="row">
