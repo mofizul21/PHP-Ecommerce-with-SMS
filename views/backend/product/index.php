@@ -21,10 +21,10 @@ partial_view('dash_header'); ?>
                 <div class="col-md-4">
                     <?php partial_view('notification'); ?>
 
-                    <form method="post" action="/dashboard/products">
+                    <form method="post" action="/dashboard/products" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Title</label>
-                            <input name="title" type="text" class="form-control" placeholder="Enter title" onload="convertToSlug(this.value)" onkeyup="convertToSlug(this.value)">
+                            <input name="title" type="text" class="form-control" placeholder="Enter title" onload="convertToSlug(this.value)" onkeyup="convertToSlug(this.value)" value="">
                         </div>
                         <div class="form-group">
                             <label>Slug</label>
@@ -51,6 +51,10 @@ partial_view('dash_header'); ?>
                             <input name="sales_price" type="number" class="form-control" placeholder="$79.99">
                         </div>
                         <div class="form-group">
+                            <label>Product Photo</label>
+                            <input name="product_photo" type="file" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label>Status</label>
                             <select name="active" class="form-control">
                                 <option value="1">Active</option>
@@ -73,6 +77,7 @@ partial_view('dash_header'); ?>
                                     <th>Title</th>
                                     <th>Category</th>
                                     <th>Description</th>
+                                    <th>Photo</th>
                                     <th>Price</th>
                                     <th>Sales Price</th>
                                     <th>Status</th>
@@ -84,8 +89,9 @@ partial_view('dash_header'); ?>
                                     <tr>
                                         <td><?= $product->id; ?></td>
                                         <td><?= $product->title; ?></td>
-                                        <td><?= $product->category_id; ?></td>
-                                        <td><?= $product->description; ?></td>
+                                        <td><?= $product->category->title; ?></td>
+                                        <td><?= substr($product->description, 0, 40); ?>...</td>
+                                        <td><img src="/media/product_photo/<?php echo $product->product_photo->image_path; ?>" alt="<?= $product->title; ?>" width="100"></td>
                                         <td>$<?= $product->price; ?></td>
                                         <td>$<?= $product->sales_price; ?></td>
                                         <td><?= $product->active === 1 ? 'Active' : 'Inactive'; ?></td>

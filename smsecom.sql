@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 -- Data exporting was unselected.
 
@@ -58,16 +58,18 @@ CREATE TABLE IF NOT EXISTS `persons` (
 
 -- Dumping structure for table smsecom.products
 CREATE TABLE IF NOT EXISTS `products` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(128) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `slug` varchar(128) NOT NULL,
+  `description` mediumtext,
   `price` decimal(10,0) NOT NULL,
-  `sale_price` decimal(10,0) NOT NULL,
+  `sales_price` decimal(10,0) NOT NULL,
   `active` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 -- Data exporting was unselected.
 
