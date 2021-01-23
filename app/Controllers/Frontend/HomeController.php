@@ -2,10 +2,12 @@
 
 namespace App\Controllers\Frontend;
 
+use Carbon\Carbon;
 use App\Models\User;
+use App\Models\Product;
+use App\Models\Category;
 use PHPMailer\PHPMailer\SMTP;
 use App\Controllers\Controller;
-use Carbon\Carbon;
 use Respect\Validation\Validator;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -14,7 +16,9 @@ class HomeController extends Controller
 {
     public function getIndex()
     {
-        view('home');
+        $products = Product::with('product_photo')->select(['id', 'slug', 'title', 'price'])->where('active', 1)->get();
+        $categories = Category::all();
+        view('home', ['products' => $products, 'categories' => $categories]);
     }
 
     public function getRegister()
@@ -97,7 +101,7 @@ class HomeController extends Controller
             // display success message
             successMsg('Regitration successful. Please check your email inbox.', 'login');
         } else {
-            errMsg('Errors occured', 'login');      
+            errMsg('Errors occured', 'login');
         }
     }
 
@@ -177,9 +181,22 @@ class HomeController extends Controller
         }
     }
 
-    public function getLogout(){
+    public function getLogout()
+    {
         unset($_SESSION['user']);
 
         successMsg("You have logout successfully.", "login");
+    }
+
+    public function getProduct($slug)
+    {
+        if ($slug === null) {
+            errMsg('Wrong slug', '/');
+        }
+
+        $product = Product::where('slug', $slug)->first();
+        $categories = Category::all();
+
+        view('product', ['product' => $product, 'categories' => $categories]);
     }
 }

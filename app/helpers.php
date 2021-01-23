@@ -19,7 +19,12 @@ if (!function_exists('partial_view')) {
 if (!function_exists('site_url')) {
     function site_url()
     {
-        return "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+        $currentPath = $_SERVER['PHP_SELF']; 
+        $pathInfo = pathinfo($currentPath);
+        $hostName = $_SERVER['HTTP_HOST'];
+        //$protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"], 0, 5)) == 'https' ? 'https' : 'http';
+        //echo $protocol . '://' . $hostName . $pathInfo['dirname'] . "";
+        echo 'https://' . $hostName . $pathInfo['dirname'] . "";
     }
 }
 
