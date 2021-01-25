@@ -10,6 +10,7 @@ $router->filter('auth', function () {
 });
 
 $router->controller('/', App\Controllers\Frontend\HomeController::class);
+$router->controller('/cart', App\Controllers\Frontend\CartController::class);
 
 // route filter applied
 $router->group(['before' => 'auth', 'prefix' => 'dashboard'], function (RouteCollector $router) {

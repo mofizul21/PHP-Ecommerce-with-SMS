@@ -52,7 +52,10 @@
                     </h5>
                     <h3>Sale Price: $<?= $product->sales_price; ?>, <span style="font-size: 14px">Price: $<?= $product->price; ?></span></h3>
                     <div class="action">
-                        <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+                        <form action="/cart" method="post" style="display: inline-block;">
+                            <input type="hidden" name="id" value="<?= $product->id; ?>">
+                            <button type="submit" class="add-to-cart btn btn-default">add to cart</button>
+                        </form>
                         <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
                     </div>
                 </div>
