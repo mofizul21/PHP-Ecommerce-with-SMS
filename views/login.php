@@ -55,6 +55,7 @@
                 </label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <p class="text-muted">Still not registerred? <a href="/register">Register Now</a></p>
             <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
         </form>
     </main>

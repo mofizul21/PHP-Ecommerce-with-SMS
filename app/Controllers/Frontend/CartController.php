@@ -23,10 +23,6 @@ class CartController extends Controller
 
         $product = Product::findOrFail($id);
 
-        // header('Content-type: application/json');
-        // var_dump($product);
-        // die;
-
         if ($product === null) {
             header('location: /');
         }
@@ -51,8 +47,6 @@ class CartController extends Controller
 
         //header('Location: ' . $_SERVER['HTTP_REFERER']);
         header('Location: /cart');
-
-        //unset($_SESSION['cart']);
     }
 
     // Remove an item from the cart

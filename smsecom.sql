@@ -32,15 +32,32 @@ CREATE TABLE IF NOT EXISTS `categories` (
 -- Dumping structure for table smsecom.orders
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
   `first_name` varchar(128) NOT NULL,
   `last_name` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL,
   `phone_number` varchar(128) NOT NULL,
   `billing_address` text NOT NULL,
-  `tota_amount` decimal(10,0) NOT NULL,
+  `total_amount` decimal(10,0) NOT NULL,
+  `payment_status` varchar(50) DEFAULT 'pending',
+  `op_status` varchar(50) DEFAULT 'pending',
+  `payment_details` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+
+-- Data exporting was unselected.
+
+-- Dumping structure for table smsecom.order_products
+CREATE TABLE IF NOT EXISTS `order_products` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `order_id` int(10) unsigned NOT NULL,
+  `product_id` int(10) unsigned NOT NULL,
+  `quantity` int(10) unsigned NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 -- Data exporting was unselected.
 
@@ -69,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 -- Data exporting was unselected.
 
@@ -80,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `product_images` (
   `image_path` varchar(128) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
 -- Data exporting was unselected.
 

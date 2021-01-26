@@ -57,6 +57,7 @@
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
             <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+            <p class="text-muted">Already have an account? <a href="/login">Login Now</a></p>
             <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
         </form>
     </main>

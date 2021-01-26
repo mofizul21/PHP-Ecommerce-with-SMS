@@ -8,6 +8,9 @@
     <?php } else { ?>
         <div class="shopping-cart">
             <h1 class="text-center mb-4">Shopping Cart</h1>
+            <?php if(!empty($_SESSION['user'])): ?>
+                <p class="text-center">You're ordering as <strong><?= $_SESSION['user']['username']; ?></strong></p>
+            <?php endif; ?>
 
             <div class="column-labels">
                 <label class="product-image">Image</label>
@@ -65,7 +68,7 @@
                 </div>
             </div>
 
-            <a href="checkout.php"><button class="checkout">Checkout</button></a>
+            <a href="/checkout"><button class="checkout">Checkout</button></a>
             <form action="/cart/destroy" method="post">
                 <button class="btn btn-danger btn-lg">Empty Cart</button>
             </form>

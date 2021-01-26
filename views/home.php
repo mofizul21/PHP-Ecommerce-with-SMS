@@ -15,6 +15,8 @@
 
 <div class="album py-5 bg-light">
     <div class="container">
+    
+        <p class="text-center"><?php include_once 'partials/notification.php'; ?></p>
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <?php foreach ($products as $product) : ?>
@@ -27,7 +29,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a href="/product/<?= $product->slug; ?>" class="btn btn-sm btn-success">View</a>
-                                    
+
                                     <form action="/cart" method="post" style="display: inline-block;">
                                         <input type="hidden" name="id" value="<?= $product->id; ?>">
                                         <button type="submit" class="btn btn-sm btn-info">add to cart</button>

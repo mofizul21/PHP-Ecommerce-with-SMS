@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'c41df38373813e107602e71676a772f32c649951',
+    'reference' => 'd247b6089a2da2c6a22a2ebc528fd2b01c47138c',
     'name' => 'mofizul/smsecom',
   ),
   'versions' => 
@@ -81,7 +81,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'c41df38373813e107602e71676a772f32c649951',
+      'reference' => 'd247b6089a2da2c6a22a2ebc528fd2b01c47138c',
     ),
     'nesbot/carbon' => 
     array (
@@ -159,6 +159,15 @@
       array (
       ),
       'reference' => '6c3aed92137836788c8ce654b9c35763c5e98b54',
+    ),
+    'stripe/stripe-php' => 
+    array (
+      'pretty_version' => 'v7.69.0',
+      'version' => '7.69.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6716cbc4ebf8cba7d45374a059c7c6e5bf53277d',
     ),
     'symfony/console' => 
     array (
